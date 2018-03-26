@@ -18,7 +18,7 @@ namespace Messenger
             InitializeComponent();
             label1.Text = f1.nam;
 
-
+            //eddd
         }
 
 
