@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.ComponentModel.DataAnnotations;
+
 
 
 namespace Messenger
@@ -283,7 +285,11 @@ namespace Messenger
             if  (placeHolder1.TextLength > 1)
             {
                 panel2.BackColor = Color.White;
-            }         
+            }
+            if (new EmailAddressAttribute().IsValid(placeHolder1.Text))
+                panel2.BackColor = Color.White;
+            else              
+                panel2.BackColor = Color.Red;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
