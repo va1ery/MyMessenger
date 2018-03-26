@@ -18,7 +18,6 @@ namespace Messenger
             InitializeComponent();
             label1.Text = f1.nam;
 
-            //eddd
         }
 
 
@@ -40,13 +39,7 @@ namespace Messenger
                 WindowState = FormWindowState.Normal; max = true;
 
             }
-
-
-
         }
-
-
-
 
 
         bool max = true;
@@ -59,7 +52,6 @@ namespace Messenger
             { WindowState = FormWindowState.Normal; max = true; }
 
         }
-
 
 
         private void userControl11_MouseEnter(object sender, EventArgs e)
@@ -158,3 +150,4 @@ namespace Messenger
 
     }
 }
+// Test GitHub
