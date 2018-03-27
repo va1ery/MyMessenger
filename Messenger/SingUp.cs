@@ -178,25 +178,28 @@ namespace Messenger
                 MessageBox.Show("Такой Email уже существует");
             }
 
-          
             else if (NameText.Text != "First Name" && passwordText.Text != "Password" && placeHolder1.Text != "Email")
             {
-                using (SqlConnection con = new SqlConnection(Properties.Settings.Default.Mess))
+                if (panel1.BackColor == Color.White && panel2.BackColor == Color.White && panel3.BackColor == Color.White)
                 {
-                    con.Open();
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandText = "INSERT INTO Users (FirstName, Email, Password) Values('" + NameText.Text + "', '" + placeHolder1.Text + "', '" + passwordText.Text + "')";
-                    cmd.ExecuteNonQuery();
-                    con.Close();
+                    using (SqlConnection con = new SqlConnection(Properties.Settings.Default.Mess))
+                    {
+                        con.Open();
+                        SqlCommand cmd = con.CreateCommand();
+                        cmd.CommandText = "INSERT INTO Users (FirstName, Email, Password) Values('" + NameText.Text + "', '" + placeHolder1.Text + "', '" + passwordText.Text + "')";
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+                    panel1.BackColor = Color.White;
+                    panel2.BackColor = Color.White;
+                    panel3.BackColor = Color.White;
+                    MessageBox.Show("Регистрация прошла успешно!");
                 }
-                panel1.BackColor = Color.White;
-                panel2.BackColor = Color.White;
-                panel3.BackColor = Color.White;
-                MessageBox.Show("Регистрация прошла успешно!");
+             
             }
-            else
+            else//TODO Не правильная проверка
             {
-                panel1.BackColor = Color.Red;
+                panel1.BackColor = Color.Red; 
                 panel2.BackColor = Color.Red;
                 panel3.BackColor = Color.Red;
             }
