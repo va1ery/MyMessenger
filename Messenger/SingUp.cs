@@ -18,18 +18,14 @@ namespace Messenger
     {
         public SingUp()
         {
-            InitializeComponent();
-            
+            InitializeComponent();          
         }
-
-
 
         private void Form1_Load(object sender, EventArgs e)
         {       
             passwordText.ForeColor = Color.LightGray;
             NameText.ForeColor = Color.LightGray;
         }
-
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -40,16 +36,8 @@ namespace Messenger
             if (e.Button == MouseButtons.Left)
             {
                 WindowState = FormWindowState.Normal; max = true;
-
             }
-
-
-
         }
-
-
-
-
 
         bool max = true;
         private bool clicked = false;
@@ -59,10 +47,7 @@ namespace Messenger
             if (max == true) { WindowState = FormWindowState.Maximized; max = false; }
             else
             { WindowState = FormWindowState.Normal; max = true; }
-
         }
-
-
 
         private void userControl11_MouseEnter(object sender, EventArgs e)
         {
@@ -74,15 +59,12 @@ namespace Messenger
             userControl11.BackColor = Color.WhiteSmoke;
         }
 
-
         private void NameText_Enter(object sender, EventArgs e)
         {
             if (NameText.Text == "First Name")
             {
                 NameText.Text = "";
                 NameText.ForeColor = Color.WhiteSmoke;
-
-
             }
         }
 
@@ -137,9 +119,7 @@ namespace Messenger
         {
             customImageButton3.Visible = false;
         }
-
-               
-
+          
         private void customImageButton2_Click_1(object sender, EventArgs e)
         {
             Application.Exit();//Закрыть форму
@@ -189,7 +169,6 @@ namespace Messenger
                 while (read.Read())
                 {
                     logi = Convert.ToInt32(read[0]);
-
                 }
                 con.Close();
             }
@@ -231,8 +210,7 @@ namespace Messenger
         {
             if (passwordText.Text == "")
             {
-                pictureBox4.BackColor = Color.Azure;
-               
+                pictureBox4.BackColor = Color.Azure;        
             }
            else if (passwordText.TextLength <= 3)//Лёгкий пароль
                 pictureBox4.BackColor = Color.Red;
@@ -249,15 +227,12 @@ namespace Messenger
                 pictureBox7.BackColor = Color.LimeGreen;
               else
                   pictureBox7.BackColor = Color.Azure;
-           
-            
+                      
            if (passwordText.TextLength > 1)
             {
                 panel3.BackColor = Color.White;
             }
-
         }
-
 
         bool vis = true;
         private void pictureBox8_Click(object sender, EventArgs e)//Подсказка на пароль
@@ -270,14 +245,11 @@ namespace Messenger
         }
 
         private void NameText_TextChanged(object sender, EventArgs e)
-        {
-           
+        {      
             if ( NameText.TextLength > 1)
             {
                 panel1.BackColor = Color.White;
-            }
-           
-
+            }       
         }
 
         private void placeHolder1_TextChanged(object sender, EventArgs e)
@@ -301,8 +273,6 @@ namespace Messenger
         private void pictureBox3_MouseEnter(object sender, EventArgs e)
         {
             test = true;
-
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -316,8 +286,7 @@ namespace Messenger
 
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
-            test = false;
-            
+            test = false;       
         }
     }
 }
