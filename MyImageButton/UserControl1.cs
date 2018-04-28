@@ -14,8 +14,7 @@ namespace MyImageButton
     {
         public UserControl1()
         {
-            InitializeComponent();
-           
+            InitializeComponent();         
         }
        public Image NormalImage;
        public Image hoverImage;

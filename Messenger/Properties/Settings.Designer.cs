@@ -25,8 +25,8 @@ namespace Messenger.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\User\\Desktop\\C#\\Mes" +
-            "senger\\Messenger\\Resources\\Messenger.mdf\";Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\User\\Desktop\\Диплом" +
+            "\\Messenger\\Messenger\\Resources\\Messenger.mdf\";Integrated Security=True")]
         public string Mess {
             get {
                 return ((string)(this["Mess"]));

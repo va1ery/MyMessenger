@@ -98,5 +98,31 @@ namespace Messenger
             pictureBox5.BackColor = Color.WhiteSmoke;
         }
 
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        bool test = false;
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
+        {
+            //pictureBox2.BackColor = Color.FromArgb(211, 211, 211);
+            test = true;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            //pictureBox2.BackColor = Color.WhiteSmoke;
+            test = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (test == true)
+            {
+                pictureBox2.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                pictureBox2.Refresh();
+            }
+        }
     }
 }//test_2
